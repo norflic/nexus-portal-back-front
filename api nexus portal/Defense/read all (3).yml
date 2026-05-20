@@ -1,0 +1,30 @@
+info:
+  name: read all (3)
+  type: http
+  seq: 5
+  tags:
+    - Defense
+
+http:
+  method: GET
+  url: "{{baseUrl}}/defenses"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: OK
+    request:
+      url: "{{baseUrl}}/defenses"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""
