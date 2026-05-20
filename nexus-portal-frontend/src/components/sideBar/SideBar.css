@@ -1,0 +1,4 @@
+a:not(.exclude-link).active {
+    background-color: var(--color-app-blue-light);
+    color: black;
+}

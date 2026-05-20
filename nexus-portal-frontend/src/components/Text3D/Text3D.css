@@ -1,0 +1,28 @@
+.text-3d {
+    position: relative;
+    transform: rotateX(10deg) rotateY(10deg) translateX(calc((-4)*var(--layer-count)*1px)); 
+    font-size: 16vw;
+    width: fit-content;
+    height: fit-content;
+
+    .layers, .layer {
+        position: absolute;
+        inset: 0;
+        width: fit-content;
+        height: fit-content
+    }
+
+    .layer {
+        transform: translateZ(calc(var(--i) * 1px));
+        --n: calc(var(--i) / var(--layer-count));
+        color: hsl(from var(--c) h s calc(var(--n) * 75%));
+    }
+}
+
+.scene {
+    perspective: 400px;
+
+    * {
+        transform-style: preserve-3d;
+    }
+}

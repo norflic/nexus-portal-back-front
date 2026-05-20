@@ -1,0 +1,648 @@
+openapi: 3.0.3
+info:
+  title: api nexus portal
+  version: "1.0"
+servers:
+  - url: http://localhost:3000
+paths:
+  /application:
+    post:
+      tags: [ Application ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ Application ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /application/{id}:
+    get:
+      tags: [ Application ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ Application ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /application/state/{state}:
+    get:
+      tags: [ Application ]
+      summary: read by state
+      parameters:
+        - name: state
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /applications:
+    get:
+      tags: [ Application ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /company:
+    post:
+      tags: [ Company ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ Company ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /company/{id}:
+    get:
+      tags: [ Company ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ Company ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /companies:
+    get:
+      tags: [ Company ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /classgroup:
+    post:
+      tags: [ ClassGroup ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ ClassGroup ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /classgroup/{id}:
+    get:
+      tags: [ ClassGroup ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ ClassGroup ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /classgroups:
+    get:
+      tags: [ ClassGroup ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /cursustype:
+    post:
+      tags: [ CursusType ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ CursusType ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /cursustype/{id}:
+    get:
+      tags: [ CursusType ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ CursusType ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /cursustypes:
+    get:
+      tags: [ CursusType ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /defense:
+    post:
+      tags: [ Defense ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ Defense ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /defense/{id}:
+    get:
+      tags: [ Defense ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ Defense ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /defenses:
+    get:
+      tags: [ Defense ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /file:
+    post:
+      tags: [ File ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ File ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /file/{id}:
+    get:
+      tags: [ File ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ File ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /files:
+    get:
+      tags: [ File ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /offer:
+    post:
+      tags: [ Offer ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ Offer ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /offer/{id}:
+    get:
+      tags: [ Offer ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ Offer ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /offers:
+    get:
+      tags: [ Offer ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /pipelinestep:
+    post:
+      tags: [ PipelineStep ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ PipelineStep ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /pipelinestep/{id}:
+    get:
+      tags: [ PipelineStep ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ PipelineStep ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /pipelinestep/uid/{id}:
+    get:
+      tags: [ PipelineStep ]
+      summary: read by user id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /pipelinesteps:
+    get:
+      tags: [ PipelineStep ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /preference:
+    post:
+      tags: [ Preference ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ Preference ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /preference/{id}:
+    get:
+      tags: [ Preference ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ Preference ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /preferences:
+    get:
+      tags: [ Preference ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /tag:
+    post:
+      tags: [ Tag ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ Tag ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /tag/{id}:
+    get:
+      tags: [ Tag ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ Tag ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /tags:
+    get:
+      tags: [ Tag ]
+      summary: read all
+      responses:
+        "200":
+          description: OK
+
+  /usertype:
+    post:
+      tags: [ UserType ]
+      summary: create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+    put:
+      tags: [ UserType ]
+      summary: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { }
+      responses:
+        "200":
+          description: OK
+  /usertype/{id}:
+    get:
+      tags: [ UserType ]
+      summary: read by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [ UserType ]
+      summary: delete by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /usertypes:
+    get:
+      tags: [ UserType ]
+      summary: read all
+      responses:
+        "200":
+          description: OK

@@ -1,0 +1,228 @@
+import DatasetType from "./types/DatasetType.js"
+
+const dataset: DatasetType = {
+    users: [
+        {
+            firstname: 'Admin',
+            lastname: 'Principal',
+            email: 'admin@nexus.com',
+            tel: '06 01 02 03 04',
+            password: 'password',
+            is_admin: true,
+            user_type: 'secretary',
+            job_title: 'Administrateur Système',
+        },
+        {
+            firstname: 'John',
+            lastname: 'Doe',
+            email: 'john@etu.com',
+            tel: '06 12 12 12 12',
+            password: 'password',
+            is_admin: false,
+            class_group: 'RA1',
+            user_type: 'student',
+            student_status: 'apprentice',
+            job_title: null,
+            cursus: 'RA',
+            year: 3,
+        },
+        {
+            firstname: 'Jane',
+            lastname: 'Student',
+            email: 'jane.student@school.com',
+            tel: '06 45 67 89 01',
+            password: 'password',
+            is_admin: false,
+            class_group: 'RA2',
+            user_type: 'student',
+            student_status: 'intern',
+            job_title: null,
+            cursus: 'RA',
+            year: 2
+        },
+        {
+            firstname: 'Mark',
+            lastname: 'Teacher',
+            email: 'mark.teacher@school.com',
+            tel: '06 56 78 90 12',
+            password: 'password',
+            is_admin: false,
+            user_type: 'teacher',
+            job_title: 'Professeur de Développement Web',
+        },
+        {
+            firstname: 'Sophie',
+            lastname: 'Dupont',
+            email: 'sophie.dupont@school.com',
+            tel: '06 55 66 77 88',
+            password: 'password',
+            is_admin: false,
+            user_type: 'year_manager',
+            job_title: 'Responsable Année 3',
+        },
+        {
+            firstname: 'Paul',
+            lastname: 'Martin',
+            email: 'paul.martin@school.com',
+            tel: '06 11 22 33 44',
+            password: 'password',
+            is_admin: false,
+            user_type: 'cursus_manager',
+            job_title: 'Responsable Cursus RA',
+        },
+        {
+            firstname: 'Lucas',
+            lastname: 'Admin',
+            email: 'lucas.admin@school.com',
+            tel: '06 99 88 77 66',
+            password: 'password',
+            is_admin: false,
+            user_type: 'secretary',
+            job_title: 'Secrétaire Pédagogique',
+        },
+        {
+            firstname: 'Antoine',
+            lastname: 'Dossin',
+            email: 'antoine.dossin@company.com',
+            tel: '06 78 90 12 34',
+            password: 'password',
+            is_admin: false,
+            user_type: 'company_member',
+            job_title: 'Développeur Senior',
+            company_id: 1,
+        },
+        {
+            firstname: 'Marie',
+            lastname: 'Lefevre',
+            email: 'marie.lefevre@company.com',
+            tel: '06 34 56 78 90',
+            password: 'password',
+            is_admin: false,
+            user_type: 'company_member',
+            job_title: 'Responsable Recrutement',
+            company_id: 1,
+        },
+        {
+            firstname: 'Admin',
+            lastname: 'Teacher',
+            email: 'admin.teacher@school.com',
+            tel: '06 13 24 35 46',
+            password: 'password',
+            is_admin: true,
+            user_type: 'teacher',
+            job_title: 'Professeur Coordinateur',
+        }
+    ],
+    company: [
+        {
+            name: "Company",
+            email: "company@company.com",
+            tel: '06 12 12 12 13',
+            description: 'une bonne entreprise',
+            street_name: 'rue de la grande rue de Davance',
+            website: 'Company.com',
+            city_name: 'Davance',
+            street_nb: 12,
+            postal_code: 12,
+        }
+    ],
+    classgroups: [
+        {name: 'RA1'},
+        {name: 'RA2'},
+        {name: 'RA3'},
+        {name: 'AGED1'},
+        {name: 'DACS1'}
+    ],
+    tags: [
+        { name: "frontend" },
+        { name: "backend" },
+        { name: "data" },
+        { name: "devops" },
+        { name: "mobile" },
+        { name: "ux" },
+        { name: "security" },
+        { name: "cloud" },
+        { name: "ai" },
+        { name: "testing" }
+    ],
+    offers: [
+        {
+            title: "Backend Developper",
+            company_name: 'Tealiae',
+            salary: 1200,
+            type: "internship",
+            description: "Frontend internship on the portal UI.",
+            date_posted: new Date(),
+            validation_level: "to-validate",
+            nb_apply: 0,
+            offer_link: "https://nexuslabs.test/offers/frontend-internship",
+            address: "12 Rue du Port, Nantes",
+            week_amount: 35,
+        },
+        {title:"zyzlsr knpvdv",company_name:"xmczcajymh9",type:"internship",description:"Create sites/apps with gaderc and zxdudaae",date_posted:new Date("7/10/2025"),validation_level:"validated",nb_apply:1,offer_link:"https://www.wkqtspvjhzo.com",address:"Apt 373",week_amount:1, salary: 1200},
+        {title:"ivserg skfqsl",company_name:"vutbecrltc1",type:"work-study",description:"Create sites/apps with juufkd and jyjvsbzt",date_posted:new Date("5/31/2025"),validation_level:"to-validate",nb_apply:2,offer_link:"https://www.upeicefzkxq.com",address:"Apt 1849",week_amount:2, salary: 1200},
+        {title:"zhqsbp eapclz",company_name:"dbdyyswqdn7",type:"permanent",description:"Create sites/apps with sbwmnx and qbepzmcx",date_posted:new Date("6/29/2025"),validation_level:"to-validate",nb_apply:3,offer_link:"https://www.zsvkcznuldl.com",address:"Apt 318",week_amount:3, salary: 1200},
+        {title:"uxlhnh pccqzv",company_name:"glgxmybsar1",type:"internship",description:"Create sites/apps with rxlmtj and ywepiawo",date_posted:new Date("12/21/2025"),validation_level:"validated",nb_apply:4,offer_link:"https://www.aiolmcllunh.com",address:"Suite 90",week_amount:4, salary: 1200},
+        {title:"owebzb wxtqsw",company_name:"jojuxdytbi5",type:"work-study",description:"Create sites/apps with jalcvj and vfmczglt",date_posted:new Date("12/6/2025"),validation_level:"not-validated",nb_apply:5,offer_link:"https://www.njmupyzzzcr.com",address:"Apt 1199",week_amount:5, salary: 1200},
+        {title:"ngtojq tftzqu",company_name:"ssuctgslbu7",type:"permanent",description:"Create sites/apps with wpszuj and fcpbojyl",date_posted:new Date("7/23/2025"),validation_level:"validated",nb_apply:6,offer_link:"https://www.medwbvmiqqf.com",address:"PO Box 88456",week_amount:6, salary: 1200},
+        {title:"ngvbah xlnbiz",company_name:"opcvmqideq9",type:"permanent",description:"Create sites/apps with xoqoth and xilqyzmb",date_posted:new Date("2/28/2026"),validation_level:"validated",nb_apply:7,offer_link:"https://www.tvkcpjgners.com",address:"Apt 1003",week_amount:7, salary: 1200},
+        {title:"uedfem zzuqqd",company_name:"chyyjvixpd1",type:"internship",description:"Create sites/apps with mgonpq and ncskeigf",date_posted:new Date("5/17/2025"),validation_level:"to-validate",nb_apply:8,offer_link:"https://www.pjbqfapwgui.com",address:"Suite 10",week_amount:8, salary: 1200},
+        {title:"bmofmy emnyni",company_name:"agovoxrkav4",type:"work-study",description:"Create sites/apps with mhovkr and kcuhnfmu",date_posted:new Date("12/3/2025"),validation_level:"to-validate",nb_apply:9,offer_link:"https://www.lkqqbynpfww.com",address:"10th Floor",week_amount:9, salary: 1200},
+        {title:"phzaod uvqyqj",company_name:"yiqrguqyyx4",type:"internship",description:"Create sites/apps with cjiqwf and hoqrmizt",date_posted:new Date("9/17/2025"),validation_level:"not-validated",nb_apply:10,offer_link:"https://www.edbliueqfmf.com",address:"PO Box 14040",week_amount:10, salary: 1200}
+    ],
+    defense: [
+        {
+            date: new Date("2026-03-15"),
+            company_id: 1,
+            hour_start: '8:00',
+            hour_end: '9:00',
+            room: "Room A",
+            student_id: 1,
+            company_member_id: 1,
+            candid_teacher_id: 1,
+            tech_teacher_id: 1
+        },
+        {
+            date: new Date("2026-04-10"),
+            company_id: 2,
+            hour_start: '10:00',
+            hour_end: '11:00',
+            room: "Room B",
+            student_id: 2,
+            company_member_id: 4,
+            candid_teacher_id: 4,
+            tech_teacher_id: 4
+        },
+        {
+            date: new Date("2026-04-20"),
+            company_id: 3,
+            hour_start: '11:00',
+            hour_end: '12:00',
+            room: "Room C",
+            student_id: 3,
+            company_member_id: 4,
+            candid_teacher_id: 4,
+            tech_teacher_id: 4
+        },
+        {
+            date: new Date("2026-04-05"),
+            company_id: 1,
+            room: "Room D",
+            hour_start: '14:00',
+            hour_end: '15:00',
+            student_id: 1,
+            company_member_id: 4,
+            candid_teacher_id: 4,
+            tech_teacher_id: 4
+        }
+    ],
+    files: [
+        {
+            name: '[SAE] Cahier des charges - Entreprise',
+            extension: 'pdf',
+            path: ''
+        }
+    ]
+}
+
+export default dataset;

@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+textarea {
+    resize: none;
+}
+
+@theme {
+    --color-app-blue-lighter: #93c4ff;
+    --color-app-blue-light: #60A5FA;
+    --color-app-blue: #1a6fd9;
+    --color-selected-blue: #2563EB;
+    --color-app-blue-dark: #1E3A8A;
+    --color-app-blue-darker: #111827;
+
+
+    --color-app-gray-text: #5B6270;
+
+    --color-app-gray-background: #FAFAFA;
+    --color-app-gray-light: #F0F0F0;
+    --color-app-gray: #4b5563;
+    --color-app-gray2: #CFCFCF;
+    --color-app-gray-dark: #9CA3AF;
+}
+
+@keyframes scaleDownOnClick {
+    50% {transform: scale(0.95);}
+    100% {transform: scale(1);}
+}
+
+.scale-down-on-click:active {
+    animation-name: scaleDownOnClick;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+/* Hide default number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+body {
+    max-width: 100dvw;
+    overflow-x: clip;
+}

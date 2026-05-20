@@ -1,0 +1,10 @@
+@keyframes bookmarkClick {
+    50% { transform: scale(1.4);}
+    100% { transform: scale(1);}
+}
+
+.bookmark-click {
+    animation-name: bookmarkClick;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}

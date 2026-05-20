@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres:alpine
+    container_name: nexus-portal-company-db-container
+    restart: on-failure:5
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    env_file: ".env"
+    volumes:
+      - nexus_portal_company_database:/var/lib/postgresql
+
+  api:
+    image: nexus-portal-company-backend:latest
+    restart: on-failure:5
+    build:
+      dockerfile: "./Dockerfile"
+      target: ${BUILD_TARGET}
+    container_name: nexus-portal-company-api-container
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    env_file: ".env"
+    # ne marche pas dupli toujours presente
+    environment:
+      - SEED=false
+    volumes:
+      - ./src:/app/src
+    depends_on:
+      db:
+        condition: service_started
+    links:
+      - "db:${POSTGRES_HOST}"
+
+  frontend:
+    image: nexus-portal-company-frontend:latest
+    build:
+      context: ../nexus-portal-frontend
+      dockerfile: "./Dockerfile"
+      target: ${BUILD_TARGET}
+    container_name: nexus-portal-company-front-container
+    ports:
+      - "5173:5173"
+    env_file: "../nexus-portal-frontend/.env"
+    volumes:
+      - "../nexus-portal-frontend/src:/app/src"
+    depends_on:
+      api:
+        condition: service_started
+
+
+volumes:
+  nexus_portal_company_database:
