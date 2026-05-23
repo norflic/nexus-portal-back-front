@@ -22,6 +22,10 @@ const routes = [
         Component: App,
         children: [
             {
+                index: true,
+                Component: LoginPage,
+            },
+            {
                 path: "offers",
                 Component: OfferPage,
             },
