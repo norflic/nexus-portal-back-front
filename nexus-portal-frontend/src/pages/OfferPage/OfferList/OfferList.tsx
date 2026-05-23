@@ -1,4 +1,4 @@
-import type { Offer, OfferWithTags } from "../../../models/Offer";
+import type { OfferWithTags } from "../../../models/Offer";
 import OfferCard from "../OfferCard/OfferCard";
 
 type OfferListProps = {

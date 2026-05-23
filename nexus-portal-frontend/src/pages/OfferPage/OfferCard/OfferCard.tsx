@@ -56,36 +56,37 @@ export default function OfferCard({ offer, isSelected, onClick = () => {} }: Off
         setIsSaved(!isSaved);
     };
 
-    let shadow = "";
-    let offerText;
-    let offerColor = "";
     // TODO: devra se baser sur un status qui est lié à l'utilisateur
-    switch (offer.status) {
-        case "refused":
-            offerText = "Refusé";
-            shadow = "shadow-red-100";
-            offerColor = "text-red-500";
-            break;
-        case "waiting":
-            offerText = "En attente...";
-            shadow = "shadow-yellow-100";
-            offerColor = "text-yellow-500";
-            break;
-        case "interview":
-            offerText = "Entretien prévu !";
-            shadow = "shadow-blue-100";
-            offerColor = "text-blue-500";
-            break;
-        case "accepted":
-            offerText = "Accepté !";
-            shadow = "shadow-green-100";
-            offerColor = "text-green-500";
-            break;
-    }
+    // Fonctionnalité à implémenter: offer.status n'existe pas encore
+    // const shadow = "";
+    // const offerText = "";
+    // const offerColor = "";
+    // switch (offer.status) {
+    //     case "refused":
+    //         offerText = "Refusé";
+    //         shadow = "shadow-red-100";
+    //         offerColor = "text-red-500";
+    //         break;
+    //     case "waiting":
+    //         offerText = "En attente...";
+    //         shadow = "shadow-yellow-100";
+    //         offerColor = "text-yellow-500";
+    //         break;
+    //     case "interview":
+    //         offerText = "Entretien prévu !";
+    //         shadow = "shadow-blue-100";
+    //         offerColor = "text-blue-500";
+    //         break;
+    //     case "accepted":
+    //         offerText = "Accepté !";
+    //         shadow = "shadow-green-100";
+    //         offerColor = "text-green-500";
+    //         break;
+    // }
 
     return (
         <Card
-            className={`2xl:w-120 xl:w-96 lg:w-72 w-120 min-h-44 ml-16 scale-down-on-click border-2 ${selectedBorderClass} ${shadow}`}
+            className={`2xl:w-120 xl:w-96 lg:w-72 w-120 min-h-44 ml-16 scale-down-on-click border-2 ${selectedBorderClass}`}
             onClick={onClick}
         >
             <div className="flex flex-row grow">
@@ -104,7 +105,7 @@ export default function OfferCard({ offer, isSelected, onClick = () => {} }: Off
                         <p className="text-sm text-gray-400">{`${offer.salary}€ - ${
                             offer.week_amount
                         } semaine${offer.week_amount > 1 ? "s" : ""} | il y a ${sinceDate(offer.date_posted)}`}</p>
-                        {offer.status && <p className={`self-end ${offerColor}`}>{offerText}</p>}
+                        {/* Status display coming soon: {offer.status && <p className={`self-end ${offerColor}`}>{offerText}</p>} */}
                     </div>
                 </div>
             </div>

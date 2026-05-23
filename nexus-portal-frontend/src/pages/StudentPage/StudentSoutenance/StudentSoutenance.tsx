@@ -11,30 +11,28 @@ import whiteSave from "../../../img/white_save.svg";
 import redPdf from "../../../img/red_pdf.svg";
 import blueStudentCap from "../../../img/blue_student_cap.svg";
 import type React from "react";
-import {useContext, useState} from "react";
+import { useState } from "react";
 import NexusDropbox from "../../../components/NexusDropbox/NexusDropbox";
-import {NexusContext} from "../../../NexusContextProvider";
 
 export default function SoutenanceCard() {
-    const user = useContext(NexusContext).user;
-  const [file, setFile] = useState<Array<File> | null>(null);
+  const [_file, setFile] = useState<Array<File> | null>(null);
 
-    function onDocumentDownloadClick(event: React.MouseEvent) {
+    function onDocumentDownloadClick(_event: React.MouseEvent) {
     }
 
-    function onDocumentPreviewClick(event: React.MouseEvent) {
+    function onDocumentPreviewClick(_event: React.MouseEvent) {
     }
 
-    function onGlobalPlanningClick(event: React.MouseEvent) {
+    function onGlobalPlanningClick(_event: React.MouseEvent) {
     }
 
-    function onNotesSaveClick(event: React.MouseEvent) {
+    function onNotesSaveClick(_event: React.MouseEvent) {
     }
 
-    function onTuteurSubmitClick(event: React.MouseEvent) {
+    function onTuteurSubmitClick(_event: React.MouseEvent) {
     }
 
-    function onTeacherSubmitClick(event: React.MouseEvent) {
+    function onTeacherSubmitClick(_event: React.MouseEvent) {
     }
 
     return (

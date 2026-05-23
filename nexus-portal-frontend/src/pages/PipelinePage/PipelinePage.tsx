@@ -14,11 +14,11 @@ type PipelinePageProps = {};
 export default function PipelinePage({}: PipelinePageProps) {
     const [currentStep, setCurrentStep] = useState(0);
 
-    const internSteps = [
-        {name: "Affectation du tuteur enseignant", comp: <div></div>},
-        {name: "Validation MonStage", comp: <div></div>},
-        {name: "Contrat Validé !", comp: <div></div>},
-    ];
+    // const internSteps = [
+    //     {name: "Affectation du tuteur enseignant", comp: <div></div>},
+    //     {name: "Validation MonStage", comp: <div></div>},
+    //     {name: "Contrat Validé !", comp: <div></div>},
+    // ];
 
     const apprenticeSteps = [
         {name: "Affectation au groupe", comp: <GroupAffectationPage/>},

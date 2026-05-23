@@ -21,7 +21,6 @@ export default function LoginPage() {
 
   const {
     data: serverReturn,
-    error,
     isError,
     isPending,
     mutate,
