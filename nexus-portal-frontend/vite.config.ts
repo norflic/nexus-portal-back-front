@@ -14,7 +14,6 @@ export default defineConfig({
         allowedHosts: ["nexus-portal.portfolio.a4r.fr", "localhost"] as any,
         cors: true,
         // Disable HMR (Hot Module Replacement) since we're behind Traefik
-        // In local dev (npm run dev), this doesn't affect anything
         hmr: false,
     },
 });

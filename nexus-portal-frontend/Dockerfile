@@ -10,11 +10,20 @@ COPY ./*config*.ts /app/
 
 RUN npm i
 
-FROM init AS watch
+FROM init AS build
 
-ENTRYPOINT ["npm", "run", "watch"]
+RUN npm run build
 
-FROM init AS start
+FROM node:alpine AS start
 
-ENTRYPOINT ["npm", "run", "dev"]
+WORKDIR /app
+
+# Install a lightweight HTTP server
+RUN npm install -g serve
+
+# Copy built app from build stage
+COPY --from=build /app/dist /app/dist
+
+# Serve dist folder on port 5173
+ENTRYPOINT ["serve", "-s", "dist", "-l", "5173"]
 
