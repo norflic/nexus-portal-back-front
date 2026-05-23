@@ -2,11 +2,8 @@ FROM node:alpine AS init
 
 WORKDIR /app/
 
-COPY ./src /app/src/
-COPY ./index.html /app/
-COPY ./package.json /app/
-COPY ./*config*.json /app/
-COPY ./*config*.ts /app/
+# Copy all project files from frontend root
+COPY . /app/
 
 RUN npm i
 
@@ -29,6 +26,9 @@ RUN npm install -g serve
 
 # Copy built app from build stage
 COPY --from=build /app/dist /app/dist
+
+# Expose the port that serve will listen on
+EXPOSE 5173
 
 # Serve dist folder on port 5173
 ENTRYPOINT ["serve", "-s", "dist", "-l", "5173"]
