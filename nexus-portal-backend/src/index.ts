@@ -14,12 +14,11 @@ import UserRouter from "./endpoints/UserRouter.js";
 import SeedAll from "./utils/seed/SeedAll.js";
 import dataset from "./utils/seed/Dataset.js";
 import {extractUserFromHeaders} from "./middleware/RoleMiddleware.js";
+import {isAllowedOrigin} from "./allowedOrigins.js";
 
 dotenv.config();
 
 export const app = express();
-
-const allowedOrigins = ["http://localhost:5173"];
 const IS_SEED_ACTIVATED = process.env.SEED || null;
 
 const options: cors.CorsOptions = {
@@ -29,8 +28,8 @@ const options: cors.CorsOptions = {
         "X-User-Type",
         "X-User-Is-Admin",
     ],
-    origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
+    origin: (origin: string | undefined, callback: (error: Error | null, allow?: boolean) => void) => {
+        if (isAllowedOrigin(origin)) {
             callback(null, true);
         } else {
             callback(new Error("Origine non autorisée par la politique CORS"));
