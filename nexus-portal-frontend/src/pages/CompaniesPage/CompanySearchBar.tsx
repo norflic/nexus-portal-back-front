@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
-import SearchResults, {
-    type SearchResultType,
-} from "../../components/SearchBar/SearchResults.tsx";
-import { useQuery } from "@tanstack/react-query";
-import { QUERY_KEYS } from "../../utils/endpoint.ts";
+import {useEffect, useState} from "react";
+import SearchResults, {type SearchResultType,} from "../../components/SearchBar/SearchResults.tsx";
+import {useQuery} from "@tanstack/react-query";
+import {QUERY_KEYS} from "../../utils/endpoint.ts";
 
 type CompanySearchBarProps = {
     companySelected: (company: SearchResultType) => void;

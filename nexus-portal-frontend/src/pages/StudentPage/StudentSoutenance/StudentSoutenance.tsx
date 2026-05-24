@@ -11,11 +11,11 @@ import whiteSave from "../../../img/white_save.svg";
 import redPdf from "../../../img/red_pdf.svg";
 import blueStudentCap from "../../../img/blue_student_cap.svg";
 import type React from "react";
-import { useState } from "react";
+import {useState} from "react";
 import NexusDropbox from "../../../components/NexusDropbox/NexusDropbox";
 
 export default function SoutenanceCard() {
-  const [_file, setFile] = useState<Array<File> | null>(null);
+    const [_file, setFile] = useState<Array<File> | null>(null);
 
     function onDocumentDownloadClick(_event: React.MouseEvent) {
     }

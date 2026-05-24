@@ -1,7 +1,7 @@
-import { useState } from "react";
+import {useState} from "react";
 import BasicPopup from "../../../components/Popups/BasicPopup";
 import Tag from "../../../components/Tag/Tag";
-import type { OfferWithTags } from "../../../models/Offer";
+import type {OfferWithTags} from "../../../models/Offer";
 
 type OfferTagListProps = {
     offer: OfferWithTags;

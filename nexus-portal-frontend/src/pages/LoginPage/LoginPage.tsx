@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import {useContext, useEffect, useState} from "react";
 import Page from "../Page";
 import {type SubmitHandler, useForm} from "react-hook-form";
 import Section from "../../components/Section/Section";
-import { useMutation } from "@tanstack/react-query";
-import { fetchEndpoint, QUERY_KEYS } from "../../utils/endpoint";
-import type { User } from "../../models/User";
-import type { FailureResponse, SuccessfulResponse } from "../../models/Utility";
-import { NexusContext } from "../../NexusContextProvider";
+import {useMutation} from "@tanstack/react-query";
+import {fetchEndpoint, QUERY_KEYS} from "../../utils/endpoint";
+import type {User} from "../../models/User";
+import type {FailureResponse, SuccessfulResponse} from "../../models/Utility";
+import {NexusContext} from "../../NexusContextProvider";
 
 interface IFormInput {
     email: string;

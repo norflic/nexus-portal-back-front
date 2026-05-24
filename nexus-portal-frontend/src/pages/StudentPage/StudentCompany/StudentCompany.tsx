@@ -8,14 +8,14 @@ import blueExport from "../../../img/blue_export.svg";
 import blueCalendar from "../../../img/blue_calendar.svg";
 import whiteSave from "../../../img/white_save.svg";
 import whiteHistory from "../../../img/white_history.svg";
-import { useState } from "react";
+import {useState} from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import type {LatLngTuple} from "leaflet";
 
 export default function StudentCompany() {
-  const [_visitDate, setVisitDate] = useState<Date | null>();
-  const [_visitNotes, setVisitNotes] = useState<string | null>();
-  const [companyLocation] = useState<LatLngTuple>([
+    const [_visitDate, setVisitDate] = useState<Date | null>();
+    const [_visitNotes, setVisitNotes] = useState<string | null>();
+    const [companyLocation] = useState<LatLngTuple>([
     45.7882651090896, 4.876165416235645,
   ]);
 
